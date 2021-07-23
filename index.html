@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script async src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <form class="search-form">
+          <input
+            type="search"
+            name="find"
+            placeholder="Buscar producto..."
+            class="search-input"
+          />
+          <button class="search-button">buscar</button>
+        </form>
+      </div>
+    </header>
+    <section class="content">
+      <h3 class="results">Resultados: <span class="result-count"></span></h3>
+      <div class="results"></div>
+    </section>
+    <template id="template">
+      <div class="results-item">
+        <img
+          src="https://pm1.narvii.com/6348/eae4e8fd46bd721f578e154bfeedec87e528b139_hq.jpg"
+          alt="prueba"
+          class="results-item-img"
+        />
+        <div class="results-item-content">
+          <h4 class="results-item-title"></h4>
+          <p class="results-item-condition"></p>
+          <p class="results-item-sell">
+            Vendidos: <span class="results-item-sell-number"></span>
+          </p>
+        </div>
+        <div class="results-item-price"></div>
+      </div>
+    </template>
+  </body>
+</html>
