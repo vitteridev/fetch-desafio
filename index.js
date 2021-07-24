@@ -13,12 +13,20 @@ function showContent(api) {
   const templateEl = document.querySelector("#template");
   const fragment = document.createDocumentFragment();
   document.querySelector(".result-count").textContent = api.paging.total;
+  console.log(api.results);
 
   for (const r of api.results) {
     templateEl.content.querySelector(".results-item-title").textContent =
       r.title;
-    templateEl.content.querySelector(".results-item-condition").textContent =
-      r.condition;
+    templateEl.content.querySelector(".results-item-title-link").href =
+      r.permalink;
+    if (r.condition == "new") {
+      templateEl.content.querySelector(".results-item-condition").textContent =
+        "Nuevo";
+    } else {
+      templateEl.content.querySelector(".results-item-condition").textContent =
+        "Hola";
+    }
     templateEl.content.querySelector(".results-item-sell-number").textContent =
       r.sold_quantity;
     templateEl.content.querySelector(".results-item-price").textContent =
